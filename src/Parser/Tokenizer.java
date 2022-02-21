@@ -19,10 +19,18 @@ public class Tokenizer {
 		while (scan.hasNextLine())
 		{
 			String[] tokens = scan.nextLine().split("\\s");
-			System.out.println(Arrays.toString(tokens));
+			this.setTokens(tokens);
 		}
 
 		return tokens;
+	}
+
+	public String[] getTokens() {
+		return tokens;
+	}
+
+	public void setTokens(String[] tokens) {
+		this.tokens = tokens;
 	}
 
 }
