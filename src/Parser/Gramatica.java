@@ -1,9 +1,20 @@
 package Parser;
 
+import java.util.ArrayList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Gramatica {
+	
+	public void grammaticLanding(ArrayList<String[]> InptRecieved) {
+		if(InptRecieved.isEmpty() == false) {
+			System.out.println("Input recieved!");
+		}
+		else {
+			System.out.println("Empty Input");
+		}
+	}
+	
 	public static void main(String[] args) {
 		Pattern pattern = Pattern.compile("[(]+(move\s)+([1-8]+[)])", Pattern.CASE_INSENSITIVE);
 		Matcher matcher = pattern.matcher("(move 5)");
