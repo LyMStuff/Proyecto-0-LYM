@@ -14,7 +14,7 @@ public class MainParser {
 		System.out.println("----	Lenguajes y Maquinas	----");
 		
 		token.InputReciever();
-		System.out.println(Arrays.toString(token.getTokens()));
+		
 		
 	}
 

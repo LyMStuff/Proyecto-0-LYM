@@ -6,7 +6,7 @@ import java.util.regex.Pattern;
 public class Gramatica {
 	public static void main(String[] args) {
 		Pattern pattern = Pattern.compile("[(]+(move\s)+([1-8]+[)])", Pattern.CASE_INSENSITIVE);
-		Matcher matcher = pattern.matcher("move 5");
+		Matcher matcher = pattern.matcher("(move 5)");
 		Pattern pattern2 = Pattern.compile("[(]+(defvar\s)+(.*\s)+([0-9]+[)])", Pattern.CASE_INSENSITIVE);
 		Matcher matcher2 = pattern2.matcher("(defvar abc 5)");
 		Pattern pattern3 = Pattern.compile("[(]+(=\s)+(.*\s)+([0-9]+[)])", Pattern.CASE_INSENSITIVE);
@@ -35,7 +35,7 @@ public class Gramatica {
 		Matcher matcher14 = pattern14.matcher("(repeat 5 (asa))");
 		Pattern pattern15 = Pattern.compile("[(]+(defun name\s)+[(](.*)+[)]\s+[(](.*)+[)]+([)])", Pattern.CASE_INSENSITIVE);
 		Matcher matcher15 = pattern15.matcher("(defun name (abc) (asa))");
-	    boolean matchFound = matcher15.find();
+	    boolean matchFound = matcher.find();
 	    if(matchFound) {
 	      System.out.println("La expresión es correcta");
 	    } else {
